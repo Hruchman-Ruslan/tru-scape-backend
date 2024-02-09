@@ -12,7 +12,7 @@ export type CompanyStatusDocument = HydratedDocument<CompanyStatus>;
 
 @Schema()
 export class CompanyStatus {
-  @Prop({ type: Status, enum: Status, default: Status.Pending, required: true })
+  @Prop({ enum: Status, default: Status.Pending, required: true })
   status: Status;
 }
 
