@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Promotion, PromotionSchema } from 'src/schemas';
+import { PromotionService } from 'src/services';
 
 @Module({
   imports: [
@@ -11,5 +12,6 @@ import { Promotion, PromotionSchema } from 'src/schemas';
       },
     ]),
   ],
+  providers: [PromotionService],
 })
 export class PromotionModule {}

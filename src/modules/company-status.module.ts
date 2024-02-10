@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CompanyStatus, CompanyStatusSchema } from 'src/schemas';
+import { CompanyStatusService } from 'src/services';
 
 @Module({
   imports: [
@@ -11,5 +12,6 @@ import { CompanyStatus, CompanyStatusSchema } from 'src/schemas';
       },
     ]),
   ],
+  providers: [CompanyStatusService],
 })
 export class CompanyStatusModule {}

@@ -13,6 +13,16 @@ import {
   SummaryStatsModule,
 } from './modules';
 
+// import {
+//   CategoryService,
+//   CompanyService,
+//   CompanyStatusService,
+//   CountryService,
+//   PromotionService,
+//   SummarySalesService,
+//   SummaryStatsService,
+// } from './services';
+
 dotenv.config();
 
 const { MONGODB_URI } = process.env;
@@ -28,5 +38,14 @@ const { MONGODB_URI } = process.env;
     SummarySalesModule,
     SummaryStatsModule,
   ],
+  // providers: [
+  //   CategoryService,
+  //   CompanyStatusService,
+  //   CompanyService,
+  //   CountryService,
+  //   PromotionService,
+  //   SummarySalesService,
+  //   SummaryStatsService,
+  // ],
 })
 export class AppModule {}
