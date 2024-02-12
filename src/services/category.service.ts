@@ -6,6 +6,6 @@ import { Category } from 'src/schemas';
 @Injectable()
 export class CategoryService {
   constructor(
-    @InjectModel(Category.name) private CategoryModel: Model<Category>,
+    @InjectModel(Category.name) private categoryModel: Model<Category>,
   ) {}
 }

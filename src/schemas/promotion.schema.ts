@@ -21,7 +21,7 @@ export class Promotion {
   companyTitle: string;
 
   @Prop({ required: false })
-  avatar: string;
+  avatar?: string;
 }
 
 export const PromotionSchema = SchemaFactory.createForClass(Promotion);
