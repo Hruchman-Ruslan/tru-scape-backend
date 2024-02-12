@@ -7,6 +7,6 @@ import { Country } from 'src/schemas';
 export class CountryService {
   constructor(
     @InjectModel(Country.name)
-    private CountryModel: Model<Country>,
+    private countryModel: Model<Country>,
   ) {}
 }

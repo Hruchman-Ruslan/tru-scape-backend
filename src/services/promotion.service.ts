@@ -7,6 +7,6 @@ import { Promotion } from 'src/schemas';
 export class PromotionService {
   constructor(
     @InjectModel(Promotion.name)
-    private PromotionModel: Model<Promotion>,
+    private promotionModel: Model<Promotion>,
   ) {}
 }

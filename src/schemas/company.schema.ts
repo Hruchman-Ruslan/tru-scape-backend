@@ -34,7 +34,7 @@ export class Company {
   countryTitle: string;
 
   @Prop({ required: false })
-  avatar: string;
+  avatar?: string;
 }
 
 export const CompanySchema = SchemaFactory.createForClass(Company);

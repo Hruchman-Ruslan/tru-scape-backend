@@ -7,6 +7,6 @@ import { CompanyStatus } from 'src/schemas';
 export class CompanyStatusService {
   constructor(
     @InjectModel(CompanyStatus.name)
-    private CompanyStatusModel: Model<CompanyStatus>,
+    private companyStatusModel: Model<CompanyStatus>,
   ) {}
 }
