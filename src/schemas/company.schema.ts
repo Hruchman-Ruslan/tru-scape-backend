@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-import { CompanyStatus } from './company-status.schema';
+import { Status } from 'src/schemas';
 
 export type CompanyDocument = HydratedDocument<Company>;
 
@@ -13,7 +13,7 @@ export class Company {
   description: string;
 
   @Prop({ required: true })
-  status: CompanyStatus;
+  status: Status;
 
   @Prop({ required: true })
   joinedDate: string;

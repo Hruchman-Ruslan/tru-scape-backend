@@ -1,4 +1,4 @@
-import { IsNumber, IsString } from 'class-validator';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class GetPromotionDto {
   @IsString()
@@ -17,5 +17,6 @@ export class GetPromotionDto {
   companyTitle: string;
 
   @IsString()
+  @IsOptional()
   avatar?: string;
 }
