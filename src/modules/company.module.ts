@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { CompanyController } from 'src/controllers';
 import { Company, CompanySchema } from 'src/schemas';
 import { CompanyService } from 'src/services';
 
@@ -13,5 +14,6 @@ import { CompanyService } from 'src/services';
     ]),
   ],
   providers: [CompanyService],
+  controllers: [CompanyController],
 })
 export class CompanyModule {}

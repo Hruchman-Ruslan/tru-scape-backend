@@ -1,4 +1,4 @@
-import { IsBoolean, IsEnum, IsString } from 'class-validator';
+import { IsBoolean, IsEnum, IsOptional, IsString } from 'class-validator';
 import { Status } from 'src/schemas';
 
 export class CreateCompanyDto {
@@ -30,5 +30,6 @@ export class CreateCompanyDto {
   countryTitle: string;
 
   @IsString()
+  @IsOptional()
   avatar?: string;
 }
