@@ -12,8 +12,4 @@ export class CategoryService {
   getCategory() {
     return this.categoryModel.find();
   }
-
-  getCategoryById(id: string) {
-    return this.categoryModel.findById(id);
-  }
 }
