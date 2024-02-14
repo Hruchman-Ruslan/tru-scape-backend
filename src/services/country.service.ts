@@ -9,4 +9,8 @@ export class CountryService {
     @InjectModel(Country.name)
     private countryModel: Model<Country>,
   ) {}
+
+  getCountry() {
+    return this.countryModel.find();
+  }
 }

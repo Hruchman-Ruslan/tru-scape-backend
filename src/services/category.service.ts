@@ -8,4 +8,12 @@ export class CategoryService {
   constructor(
     @InjectModel(Category.name) private categoryModel: Model<Category>,
   ) {}
+
+  getCategory() {
+    return this.categoryModel.find();
+  }
+
+  getCategoryById(id: string) {
+    return this.categoryModel.findById(id);
+  }
 }

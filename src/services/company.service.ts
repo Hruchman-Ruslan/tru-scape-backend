@@ -8,19 +8,19 @@ import { CreateCompanyDto } from 'src/dto';
 export class CompanyService {
   constructor(
     @InjectModel(Company.name)
-    private companyServiceModel: Model<Company>,
+    private companyModel: Model<Company>,
   ) {}
 
   createCompany(createCompanyDto: CreateCompanyDto) {
-    const newCompany = new this.companyServiceModel(createCompanyDto);
+    const newCompany = new this.companyModel(createCompanyDto);
     return newCompany.save();
   }
 
   getCompanies() {
-    return this.companyServiceModel.find();
+    return this.companyModel.find();
   }
 
   getCompanyById(id: string) {
-    return this.companyServiceModel.findById(id);
+    return this.companyModel.findById(id);
   }
 }

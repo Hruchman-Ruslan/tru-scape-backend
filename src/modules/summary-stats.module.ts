@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { SummaryStatsController } from 'src/controllers';
 import { SummaryStats, SummaryStatsSchema } from 'src/schemas';
 import { SummaryStatsService } from 'src/services';
 
@@ -13,5 +14,6 @@ import { SummaryStatsService } from 'src/services';
     ]),
   ],
   providers: [SummaryStatsService],
+  controllers: [SummaryStatsController],
 })
 export class SummaryStatsModule {}
