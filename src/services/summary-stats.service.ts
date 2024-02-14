@@ -9,4 +9,8 @@ export class SummaryStatsService {
     @InjectModel(SummaryStats.name)
     private summaryStatsModel: Model<SummaryStats>,
   ) {}
+
+  getSummaryStats() {
+    return this.summaryStatsModel.find();
+  }
 }

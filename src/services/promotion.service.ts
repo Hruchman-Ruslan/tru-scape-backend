@@ -9,4 +9,8 @@ export class PromotionService {
     @InjectModel(Promotion.name)
     private promotionModel: Model<Promotion>,
   ) {}
+
+  getPromotion() {
+    return this.promotionModel.find();
+  }
 }
